@@ -12,7 +12,7 @@ const getCountryByName= async (countryName)  => {
 
     const languages = document.createElement ('p');
     const languagesArray = Object.values(jsonData[0].languages);
-    const languagesString = languagesArray-join(",");
+    const languagesString = languagesArray.join(", ");
     languages. innerText = `Language: ${languagesString}`;
 
     const population = document. createElement ('p');
@@ -25,6 +25,7 @@ const getCountryByName= async (countryName)  => {
     // return jsonData[0].name.common;    
 } 
 
+getCountryByName("Bolivia");
 // const getCapitalOfCountry = async(countryName) => {
 //     const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
 //     const jsonData = await response.json();
